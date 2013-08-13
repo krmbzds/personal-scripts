@@ -70,9 +70,9 @@ Section "Device"
     Driver         "nvidia"
     VendorName     "NVIDIA Corporation"
     Option         "NoLogo" "True"
-    Option 	       "RegistryDwords" "EnableBrightnessControl=1"
-    Option 	       "RegistryDwords" "PerfLevelSrc=0x3333"
-    Option	       "OnDemandVBlankInterrupts" "1"
+    Option 	   "RegistryDwords" "EnableBrightnessControl=1"
+    Option 	   "RegistryDwords" "PerfLevelSrc=0x3333"
+    Option	   "OnDemandVBlankInterrupts" "1"
 EndSection
 
 Section "Screen"
