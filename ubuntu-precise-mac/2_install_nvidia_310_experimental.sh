@@ -1,5 +1,4 @@
 
-
 # Some housekeeping
 
 sudo /usr/bin/maintenance
@@ -74,6 +73,13 @@ EOF
 # applications, e.g. Firefox, set the InitialPixmapPlacement parameter to 2: 
 # Credit: ArchWiki (Thanks!)
 
-nvidia-settings -a InitialPixmapPlacement=2
+sudo nvidia-settings -a InitialPixmapPlacement=2
+
+
+# Maybe we could restart the computer?
+# Giving you a minute to realize the fact
+
+sudo shutdown -r +1
+
 
 
