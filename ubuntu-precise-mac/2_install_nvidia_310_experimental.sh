@@ -1,4 +1,3 @@
-
 # Some housekeeping
 
 sudo /usr/bin/maintenance
@@ -66,6 +65,26 @@ Section "Monitor"
     Option         "DPMS"
 EndSection
 
+Section "Device"
+    Identifier     "Device0"
+    Driver         "nvidia"
+    VendorName     "NVIDIA Corporation"
+    Option         "NoLogo" "True"
+    Option 	       "RegistryDwords" "EnableBrightnessControl=1"
+    Option 	       "RegistryDwords" "PerfLevelSrc=0x3333"
+    Option	       "OnDemandVBlankInterrupts" "1"
+EndSection
+
+Section "Screen"
+    Identifier     "Screen0"
+    Device         "Device0"
+    Monitor        "Monitor0"
+    DefaultDepth    24
+    SubSection     "Display"
+        Depth       24
+    EndSubSection
+EndSection
+
 EOF
 
 
@@ -80,6 +99,4 @@ sudo nvidia-settings -a InitialPixmapPlacement=2
 # Giving you a minute to realize the fact
 
 sudo shutdown -r +1
-
-
 
