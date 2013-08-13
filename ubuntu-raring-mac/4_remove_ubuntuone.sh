@@ -6,7 +6,7 @@ sudo killall ubuntuone-login ubuntuone-preferences ubuntuone-syncdaemon
 
 # Remove related packages
 
-sudo apt-get purge ubuntuone-client python-ubuntuone-storage*
+sudo apt-get -y purge ubuntuone-client python-ubuntuone-storage*
 
 
 # Commit genocide
