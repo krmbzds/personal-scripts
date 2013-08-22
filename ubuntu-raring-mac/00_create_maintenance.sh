@@ -1,17 +1,17 @@
 # Creating an easy to run update script
 
-sudo touch /usr/bin/maintenance
+FILE="/usr/bin/maintenance"
 
-echo "sudo apt-get -y update"     | sudo tee -a /usr/bin/maintenance
-echo "sudo apt-get -y upgrade"    | sudo tee -a /usr/bin/maintenance
-echo "sudo apt-get -y autoclean"  | sudo tee -a /usr/bin/maintenance
-echo "sudo apt-get -y autoremove" | sudo tee -a /usr/bin/maintenance
+sudo touch $FILE
 
-sudo chmod +x /usr/bin/maintenance
+echo "sudo apt-get -y update"     | sudo tee -a $FILE
+echo "sudo apt-get -y upgrade"    | sudo tee -a $FILE
+echo "sudo apt-get -y autoclean"  | sudo tee -a $FILE
+echo "sudo apt-get -y autoremove" | sudo tee -a $FILE
+
+sudo chmod +x $FILE
 
 
 # And running it!
 
-sudo /usr/bin/maintenance
-
-
+sudo $FILE
