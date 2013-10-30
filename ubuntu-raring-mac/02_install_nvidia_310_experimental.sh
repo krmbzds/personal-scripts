@@ -16,6 +16,16 @@ echo "\n" 				      | sudo tee -a /etc/default/grub
 echo 'GRUB_CMDLINE_LINUX_DEFAULT="nomodeset"' | sudo tee -a /etc/default/grub
 
 
+
+# Exiting the script until I solve the permission problem.
+
+echo "\n"
+echo "Sorry folks, you need to run the rest of the script yourself due to some bug (will solve later). Go ahead and run the rest of the scipt partially in your terminal:\n"
+sleep 5
+cat ./`basename $0` | tail -80
+exit
+
+
 # Create xconfig file
 
 sudo nvidia-xconfig
